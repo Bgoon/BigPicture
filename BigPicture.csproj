@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26C91BEC-DFC0-4B4E-A836-7B2734C6F3C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BigPicture</RootNamespace>
+    <AssemblyName>BigPicture</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Client</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>Client</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <LangVersion>7</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BigPicture.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E25FC96642DC052E81D7046CB82E23611C5DCEC4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BigPicture_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Alert.Designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DetailPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DetailPanel.Designer.cs">
+      <DependentUpon>DetailPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ProgramInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ProgramInfo.Designer.cs">
+      <DependentUpon>ProgramInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TimeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TimeDialog.Designer.cs">
+      <DependentUpon>TimeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\OptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\OptionForm.Designer.cs">
+      <DependentUpon>OptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Tutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tutorial.Designer.cs">
+      <DependentUpon>Tutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Script\Form\SetDesktop.cs" />
+    <Compile Include="Script\System\AppInfo.cs" />
+    <Compile Include="Script\Form\DragEffector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Script\Form\LayerNamer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Script\Form\MainUI.cs" />
+    <Compile Include="Script\Form\Renderer.cs" />
+    <Compile Include="Script\Form\AAForms.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Script\Graphic\ColorManager.cs" />
+    <Compile Include="Script\Graphic\ColorPalett.cs" />
+    <Compile Include="Script\Input\Mouse.cs" />
+    <Compile Include="Script\Input\WinInput.cs" />
+    <Compile Include="Script\IO\SaveManager.cs" />
+    <Compile Include="Script\System\MouseUpdater.cs" />
+    <Compile Include="Script\System\Option.cs" />
+    <Compile Include="Script\System\ProcessProtocol.cs" />
+    <Compile Include="Script\System\RemoveStack.cs" />
+    <Compile Include="Script\System\TickUpdater.cs" />
+    <Compile Include="Script\Update\UpdateCheck.cs" />
+    <Compile Include="Script\Utility\Extension.cs" />
+    <Compile Include="Script\Graphic\FontManager.cs" />
+    <Compile Include="Script\Form\Layer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script\Form\LayerManager.cs" />
+    <Compile Include="Script\Utility\NativeFunc.cs" />
+    <Compile Include="Script\Utility\Random.cs" />
+    <Compile Include="Script\Utility\ProcessCheker.cs" />
+    <Compile Include="Script\Utility\StringParser.cs" />
+    <EmbeddedResource Include="Form\Alert.resx">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DetailPanel.resx">
+      <DependentUpon>DetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\OptionForm.resx">
+      <DependentUpon>OptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ProgramInfo.resx">
+      <DependentUpon>ProgramInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TimeDialog.resx">
+      <DependentUpon>TimeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tutorial.resx">
+      <DependentUpon>Tutorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Font\Koverwatch.ttf" />
+    <None Include="Resources\Font\SDSwaggerTTF.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option_SystemPanel.png" />
+    <None Include="Resources\Root_UndoBtn.png" />
+    <None Include="Resources\Option_DragBarBG_Left.png" />
+    <None Include="Resources\Option_DragBarBtn.png" />
+    <None Include="Resources\Option_DragBarBG_Mid.png" />
+    <None Include="Resources\Option_DragBar_Mid.png" />
+    <None Include="Resources\Option_DragBarBG_Right.png" />
+    <None Include="Resources\Option_DisplayPanel.png" />
+    <None Include="Resources\Info_Panel.png" />
+    <Content Include="Resources\Sound\Alert.mp3" />
+    <Content Include="Resources\Sound\Alert.wav" />
+    <None Include="Resources\Tutorial_Page6.png" />
+    <None Include="Resources\Tutorial_Page5.png" />
+    <None Include="Resources\Tutorial_Page1.png" />
+    <None Include="Resources\Tutorial_Page4.png" />
+    <None Include="Resources\Tutorial_Page3.png" />
+    <None Include="Resources\Tutorial_Page2.png" />
+    <None Include="Resources\Tutorial_ExitBtn_over.png" />
+    <None Include="Resources\Tutorial_ExitBtn_on.png" />
+    <None Include="Resources\Tutorial_ExitBtn_down.png" />
+    <None Include="Resources\Tutorial_State_off.png" />
+    <None Include="Resources\Tutorial_State_on.png" />
+    <None Include="Resources\Tutorial_RightBtn_over.png" />
+    <None Include="Resources\Tutorial_RightBtn_on.png" />
+    <None Include="Resources\Tutorial_RightBtn_down.png" />
+    <None Include="Resources\Tutorial_Panel.png" />
+    <None Include="Resources\Tutorial_Page0.png" />
+    <None Include="Resources\Tutorial_LeftBtn_over.png" />
+    <None Include="Resources\Tutorial_LeftBtn_on.png" />
+    <None Include="Resources\Tutorial_LeftBtn_down.png" />
+    <None Include="Resources\Option_ScrollBar.png" />
+    <None Include="Resources\Tray_UpdateIcon.png" />
+    <None Include="Resources\Tray_OptionIcon.png" />
+    <None Include="Resources\Tray_HelpIcon.png" />
+    <None Include="Resources\Font\KOMACON.ttf" />
+    <None Include="Resources\Option_DataPanel.png" />
+    <None Include="Resources\Option_CloseBtn.png" />
+    <None Include="Resources\Option_Button_over.png" />
+    <None Include="Resources\Option_Button_on.png" />
+    <None Include="Resources\Option_Button_down.png" />
+    <None Include="Resources\Option_Checkbox_checked.png" />
+    <None Include="Resources\Option_Checkbox_unchecked.png" />
+    <None Include="Resources\Option_RadioBtn_unchecked.png" />
+    <None Include="Resources\Option_RadioBtn_checked.png" />
+    <None Include="Resources\Option_SystemBtn_on.png" />
+    <None Include="Resources\Option_SystemBtn_off.png" />
+    <None Include="Resources\Option_DisplayBtn_on.png" />
+    <None Include="Resources\Option_DisplayBtn_off.png" />
+    <None Include="Resources\Option_DataBtn_on.png" />
+    <None Include="Resources\Option_DataBtn_off.png" />
+    <None Include="Resources\Option_Panel.png" />
+    <None Include="Resources\TimeDialog_Panel.png" />
+    <None Include="Resources\Root_ScheduleBtn.png" />
+    <None Include="Resources\TimeDialog_AM.png" />
+    <None Include="Resources\TimeDialog_PM.png" />
+    <None Include="Resources\TimeDialog_CancelBtn.png" />
+    <None Include="Resources\TimeDialog_ApplyBtn.png" />
+    <None Include="Resources\TimeDialog_CancelBtn_over.png" />
+    <None Include="Resources\TimeDialog_CancelBtn_on.png" />
+    <None Include="Resources\TimeDialog_CancelBtn_down.png" />
+    <None Include="Resources\TimeDialog_ApplyBtn_over.png" />
+    <None Include="Resources\TimeDialog_ApplyBtn_on.png" />
+    <None Include="Resources\TimeDialog_ApplyBtn_down.png" />
+    <None Include="Resources\Font\KoPubDotumBold.ttf" />
+    <None Include="Resources\Layer_RenameBtn_over.png" />
+    <None Include="Resources\Layer_RenameBtn_on.png" />
+    <None Include="Resources\Layer_RenameBtn_down.png" />
+    <None Include="Resources\Layer_ApplyBtn_over.png" />
+    <None Include="Resources\Layer_ApplyBtn_on.png" />
+    <None Include="Resources\Layer_ApplyBtn_down.png" />
+    <None Include="Resources\Layer_TextBox_Right.png" />
+    <None Include="Resources\Layer_TextBox_mid.png" />
+    <None Include="Resources\Layer_TextBox_Left.png" />
+    <None Include="Resources\Root_PlusBtn_disabled.png" />
+    <None Include="Resources\Root_trashBtn.png" />
+    <None Include="Resources\Root_PlusBtn.png" />
+    <None Include="Resources\Root_HideBtn.png" />
+    <Content Include="Logo.ico" />
+    <None Include="Resources\Detail_Panel_Left.png" />
+    <None Include="Resources\Detail_Panel_Mid.png" />
+    <None Include="Resources\Detail_Panel_Right.png" />
+    <None Include="Resources\Alert_Panel.png" />
+    <None Include="Resources\Alert_closeBtn.png" />
+    <Content Include="Resources\Font\FontLicense.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
